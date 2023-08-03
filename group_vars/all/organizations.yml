@@ -1,0 +1,9 @@
+---
+controller_organizations:
+  - name: config_as_code
+    default_environment: supported
+    galaxy_credentials:
+      - ah_certified
+      - ah_published
+      - ah_community
+...

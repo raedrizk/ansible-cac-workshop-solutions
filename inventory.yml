@@ -1,0 +1,15 @@
+---
+all:
+  children:
+    automationcontroller:
+      hosts:
+        student1.hcjps.example.opentlc.com
+
+    automationhub:
+      hosts:
+        hub-student1.hcjps.example.opentlc.com
+
+    builder:
+      hosts:
+        student1.hcjps.example.opentlc.com
+...

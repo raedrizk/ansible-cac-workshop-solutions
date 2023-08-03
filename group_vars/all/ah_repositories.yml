@@ -1,0 +1,11 @@
+---
+ah_repository_community:
+  requirements:
+    - infra.aap_utilities
+    - infra.ee_utilities
+    - containers.podman
+    - awx.awx
+    - infra.ah_configuration
+    - infra.controller_configuration
+  wait: true
+...
