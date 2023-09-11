@@ -3,8 +3,6 @@
   hosts: all
   vars_files:
     - "../vault.yml"
-  vars:
-    controller_configuration_async_dir: '/tmp/.ansible_async'
   connection: local
   tasks:
     - name: Include setting role
@@ -39,6 +37,7 @@
 
     # probably not optimal but works, looking for better solutions
     - name: Figuring out AH token
+      when: ah_token is not defined or ah_token['token'] is defined
       block:
         - name: Authenticate and get an API token from Automation Hub
           infra.ah_configuration.ah_token:
@@ -52,8 +51,7 @@
         - name: Fixing format
           ansible.builtin.set_fact:
             ah_token: "{{ ah_token['token'] }}"
-          when: r_ah_token['changed']
-      when: ah_token is not defined or ah_token['token'] is defined
+          when: r_ah_token['changed'] # noqa: no-handler
 
     - name: Include credential_types role
       ansible.builtin.include_role:

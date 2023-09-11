@@ -4,11 +4,11 @@ controller_projects:
     description: execution environments configurations
     organization: config_as_code
     scm_type: git
-    scm_url: https://gitlab.hcjps.example.opentlc.com/student1/workshop_project.git
+    scm_url: https://gitlab.sep1.demoredhat.com/student1/workshop_project.git
     scm_branch: ""
     scm_clean: true
     scm_update_on_launch: true
-    scm_credential: "git"
+    scm_credential: "github"
     update_project: true
     wait: true
 ...

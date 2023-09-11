@@ -3,13 +3,13 @@ all:
   children:
     automationcontroller:
       hosts:
-        student1.hcjps.example.opentlc.com
+        student1.sep1.demoredhat.com:
 
     automationhub:
       hosts:
-        hub-student1.hcjps.example.opentlc.com
+        hub-student1.sep1.demoredhat.com:
 
     builder:
       hosts:
-        student1.hcjps.example.opentlc.com
+        student1.sep1.demoredhat.com:
 ...
